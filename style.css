@@ -1,0 +1,223 @@
+/* --- GERAL & VARIÁVEIS --- */
+:root {
+    --primary-color: #b6454b; /* Verde escuro para agricultura */
+    --secondary-color: #2e7d32; /* Amarelo/laranja para destaque */
+    --dark-color: #212121; /* Cinza escuro para textos */
+    --light-color: #f4f4f4; /* Cinza claro para fundos */
+    --white-color: #ffffff;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: var(--dark-color);
+    background-color: var(--white-color);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h1, h2, h3, h4 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+section {
+    padding: 60px 0;
+}
+
+/* --- CABEÇALHO E NAVEGAÇÃO --- */
+.site-header {
+    background: #b6454b;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.custom-logo {
+    max-width: 80px;
+    height: auto;
+}
+
+.main-navigation ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.main-navigation a {
+    text-decoration: none;
+    color: var(--dark-color);
+    font-weight: 600;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.main-navigation a:hover, .main-navigation a.current {
+    background-color: var(--secondary-color);
+    color: var(--white-color);
+}
+
+
+/* --- SEÇÃO HERO --- */
+.hero-section {
+    /* ADICIONE A URL DA SUA IMAGEM DE FUNDO AQUI */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1560493676-04071c5f467b?q=80&w=1974&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+    color: var(--white-color);
+    text-align: center;
+    padding: 100px 0;
+}
+
+.hero-section h1 {
+    font-size: 3rem;
+    color: var(--white-color);
+}
+
+.hero-section .subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    background-color: var(--primary-color);
+    color: var(--dark-color);
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 700;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #ffb74d; /* Laranja mais claro */
+    transform: translateY(-3px);
+}
+
+/* --- SEÇÕES DE CONTEÚDO --- */
+.intro-section, .video-section, .partners-section {
+    text-align: center;
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* Proporção 16:9 */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    background: #000;
+    margin-top: 2rem;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+/* --- SEÇÃO DE DIFERENCIAIS (FEATURES) --- */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 2rem;
+}
+
+.feature-card {
+    background: var(--light-color);
+    padding: 30px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+}
+
+/* --- SEÇÃO VALORES --- */
+.values-section {
+    background-color: var(--light-color);
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 2rem;
+}
+
+.value-item ul {
+    list-style-type: '✓ '; /* Adiciona um marcador de check */
+    padding-left: 20px;
+}
+
+/* --- SEÇÃO PARCEIROS --- */
+.partners-logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+.partners-logos img {
+    max-height: 60px;
+    filter: grayscale(100%);
+    opacity: 0.7;
+    transition: filter 0.3s, opacity 0.3s;
+}
+
+.partners-logos img:hover {
+    filter: grayscale(0%);
+    opacity: 1;
+}
+
+/* --- RODAPÉ --- */
+.site-footer {
+    background: var(--dark-color);
+    color: var(--light-color);
+    text-align: center;
+    padding: 30px 0;
+}
+
+/* --- RESPONSIVIDADE --- */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .hero-section h1 {
+        font-size: 2.2rem;
+    }
+
+    section {
+        padding: 40px 0;
+    }
+}
