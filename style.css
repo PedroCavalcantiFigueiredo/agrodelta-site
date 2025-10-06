@@ -5,6 +5,7 @@
     --dark-color: #212121; /* Cinza escuro para textos */
     --light-color: #f4f4f4; /* Cinza claro para fundos */
     --white-color: #ffffff;
+    --terciary-color: #ffb74d; /* Laranja para botões e links */
 }
 
 body {
