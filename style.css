@@ -579,6 +579,42 @@ section {
     cursor: pointer;
 }
 
+.footer-links {
+    margin-top: 10px;
+}
+.footer-links a {
+    color: #555;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 0.9em;
+}
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+/* ==========================================================================
+   Estilos para Conteúdo de Páginas (Termos, Privacidade, etc.)
+   ========================================================================== */
+
+.page-content {
+    padding: 40px 0;
+}
+
+.page-content h2 {
+    margin-top: 20px;
+    font-size: 1.8em;
+}
+
+.page-content p,
+.page-content li {
+    line-height: 1.7;
+    color: #555;
+}
+
+.page-content ul {
+    list-style: disc;
+    padding-left: 20px;
+}
 
 /* --- RESPONSIVIDADE --- */
 @media (max-width: 768px) {
